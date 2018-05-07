@@ -29,10 +29,16 @@ $(document).ready(function() {
     ];
 
     var events = [
-        { name: "Durre Muhammad - Terry Long Lab", location: "2212 Gardner Hall", date: "February 16th, 2018", time: "3:00pm - room 2212, Gardner Hall", desc: "Terri Long Lab", season: "Spring 2018" },
-        { name: "Cranos Williams - INTRINSyC", location: "2212 Gardner Hall", date: "February 23rd, 2018", time: "3:00pm - room 2212, Gardner Hall", desc: "INTRYNSyC", season: "Spring 2018" },
-        { name: "Carla Brillada - Marcela Rojas-Pierce Lab", location: "2212 Garnder Hall", date: "March 2nd, 2018", time: "3:00pm - room 2212, Gardner Hall", desc: "Marcela Rojas-Pierce Lab", season: "Spring 2018" }
-        // { name: "", location: "", date: "", time: "", desc: "" }
+        { name: "Samantha Case - Sirius Li Lab", date: "May 4th, 2018", time: "3:00 pm - room 2212, Garnder Hall", season: "Spring 2018", desc: "Coffee/Cookies"},
+        { name: "Natalie Clark - Sozzani Lab", date: "May 11th, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Spring 2018", desc: "Coffee/Cookies"},
+        { name: "Jigar Desai - Colleen Doherty Lab", date: "May 18th, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Spring 2018", desc: "Coffee/Cookies"},
+        { name: "Ann Loraine - INTRYNSyC", date: "May 25th, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Spring 2018", desc: "Pizza/Drinks"},
+        { name: "Imani Madison - Long Lab", date: "June 1st, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},
+        { name: "Ben Graham - Candace Haigler Lab", date: "June 8th, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},
+        { name: "Saet-byul Kim - Balint-Kurti Lab", date: "June 15th, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},        
+        { name: "Brian Sullivan - Bob Franks Lab", date: "June 22nd, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},
+        { name: "Ryan Sartor - Hollan Lab / ASPB", date: "July 6th, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},
+        { name: "Donna Liebelt - Colleen Doherty Lab", date: "July 13th, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"}
     ];
 
     function labsDisplay() {
@@ -83,13 +89,10 @@ $(document).ready(function() {
             eventBody.append(eventDate);            
             var eventName = $("<h4>").text(events[i].name);
             eventBody.append(eventName);
-            // var eventDesc = $("<p>").text(events[i].desc);
-            // eventBody.append(eventDesc);
-
-            // var eventLocation = $("<p>").text(events[i].location);
-            // eventBody.append(eventLocation);
             var eventTime = $("<p>").text(events[i].time);
             eventBody.append(eventTime);
+            var eventDesc = $("<p>").text(events[i].desc);
+            eventBody.append(eventDesc);            
             eventCard.append(eventBody);
             $("#events").append(eventCard);
         }

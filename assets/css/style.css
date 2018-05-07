@@ -32,6 +32,21 @@ h1 {
 	font-family: UniversCondensed,Arial,sans-serif;
 }
 
+button {
+    background-color: #c00;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+button a {
+    color: #fff;
+}
+
+.btn {
+    display: block;
+    margin-bottom: 20px;
+}
+
 .landing-header {
     background-color: #c00;
     color: #fff;
@@ -59,7 +74,11 @@ h1 {
 }
 
 .main-footer {
-    padding: 3em 0;
+    padding: 2em 0;
+}
+
+.social {
+    margin-top: 22px;
 }
 
 .sub-footer {
