@@ -29,23 +29,28 @@ $(document).ready(function() {
     ];
 
     var events = [
-        { name: "Samantha Case - Sirius Li Lab", date: "May 4th, 2018", time: "3:00 pm - room 2212, Garnder Hall", season: "Spring 2018", desc: "Coffee/Cookies"},
-        { name: "Natalie Clark - Sozzani Lab", date: "May 11th, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Spring 2018", desc: "Coffee/Cookies"},
-        { name: "Jigar Desai - Colleen Doherty Lab", date: "May 18th, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Spring 2018", desc: "Coffee/Cookies"},
-        { name: "Ann Loraine - INTRYNSyC", date: "May 25th, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Spring 2018", desc: "Pizza/Drinks"},
-        { name: "Imani Madison - Long Lab", date: "June 1st, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},
-        { name: "Ben Graham - Candace Haigler Lab", date: "June 8th, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},
-        { name: "Saet-byul Kim - Balint-Kurti Lab", date: "June 15th, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},        
-        { name: "Brian Sullivan - Bob Franks Lab", date: "June 22nd, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},
-        { name: "Ryan Sartor - Hollan Lab / ASPB", date: "July 6th, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},
-        { name: "Donna Liebelt - Colleen Doherty Lab", date: "July 13th, 2018", time: "3:00pm - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"}
+        { name: "Jigar Desai - Colleen Doherty Lab", date: "May 18th, 2018", time: "3:00 p.m. - room 2212, Gardner Hall", season: "Spring 2018", desc: "Coffee/Cookies"},
+        { name: "Ann Loraine - INTRYNSyC", date: "May 25th, 2018", time: "3:00 p.m. - room 2212, Gardner Hall", season: "Spring 2018", desc: "Pizza/Drinks"},
+        { name: "Imani Madison - Long Lab", date: "June 1st, 2018", time: "3:00 p.m. - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},
+        { name: "Ben Graham - Candace Haigler Lab", date: "June 8th, 2018", time: "3:00 p.m. - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},
+        { name: "Saet-byul Kim - Balint-Kurti Lab", date: "June 15th, 2018", time: "3:00 p.m. - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},        
+        { name: "Brian Sullivan - Bob Franks Lab", date: "June 22nd, 2018", time: "3:00 p.m. - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},
+        { name: "Ryan Sartor - Hollan Lab / ASPB", date: "July 6th, 2018", time: "3:00 p.m. - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},
+        { name: "Donna Liebelt - Colleen Doherty Lab", date: "July 13th, 2018", time: "3:00 p.m. - room 2212, Gardner Hall", season: "Summer 2018", desc: "Coffee/Cookies"},
+        { name: "John McDowell - INTRINSyC", date: "July 20th, 2018", time: "3:00 p.m. - room 2212, Gardner Hall", season: "Summer 2018", desc: "Pizza/Dinks"},
+        { name: "Summer REU Students", date: "All Labs", time: "3:00 p.m. - room 2212, Gardner Hall", season: "Summer 2018", desc: ""}
+        // { name: "", date: "", time: "", season: "", desc: ""},
+        // { name: "", date: "", time: "", season: "", desc: ""},
+        // { name: "", date: "", time: "", season: "", desc: ""},
+        // { name: "", date: "", time: "", season: "", desc: ""},
+    
     ];
 
     function labsDisplay() {
         //loop through labs and display image, title, links
         for (var i = 0; i < memberLabs.length; i++) {
             //create card which holds image, title and links
-            var cardDiv = $("<div class='col-lg-3 col-md-4 col-sm-12'>");
+            var cardDiv = $("<div class='col-lg-3 col-md-4 col-sm-6 col-xs-12'>");
             var labCard = $("<div class='card member-card'>");
             var cardImage = $("<img class='card-img-top' src='" + memberLabs[i].labImg + "'>");
             // cardImage.html("<img class='card-img-top' src='http://www4.ncsu.edu/~jmalonso/Alonso-Stepanova_Photos_files/Lab2016_2.png'>");
@@ -75,6 +80,8 @@ $(document).ready(function() {
 
     function eventsDisplay() {
     	var season;
+        var date = $.now();
+        console.log(date);
         //loop through events and display them 
         for (var i = 0; i < events.length; i++) {
         	if (season !== events[i].season) {

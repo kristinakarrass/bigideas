@@ -116,6 +116,10 @@ button a {
     display: block;
 }
 
+.img-header {
+    padding-left: 0px;
+}
+
 .event-card {
 	padding-left: 30px;
     margin-bottom: 40px;
